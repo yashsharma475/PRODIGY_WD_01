@@ -1,0 +1,105 @@
+/* Reset */
+html{
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Fixed Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 40px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+/* Navbar after scroll */
+#navbar.scrolled {
+    background: #1e3a8a;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Logo */
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background-color: #facc15;
+    color: #111827;
+    transform: translateY(-2px);
+}
+
+/* Sections for scrolling */
+section {
+    height: 100vh;
+    padding-top: 100px;
+    text-align: center;
+}
+
+#home {
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    color: white;
+}
+
+#about {
+    background: #f3f4f6;
+}
+
+#services {
+    background: #dbeafe;
+}
+
+#portfolio {
+    background: #fef3c7;
+}
+
+#contact {
+    background: #dcfce7;
+}
+
+@media (max-width:768px){
+
+.nav-links{
+    flex-direction:column;
+    gap:15px;
+}
+
+#navbar{
+    flex-direction:column;
+}
+
+}
